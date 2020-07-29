@@ -1,0 +1,76 @@
+<!doctype html><html><head> 
+  <title>Quotes</title> 
+ <style type="text/css" id="dcoder_stylesheet">body{
+  font-size : 30px;
+  background-color : #FDEEF4 ;
+}
+h1{
+  font-size : 60px;
+  color : #800517  ;
+  border-bottom : 2px solid black;
+  font-family : serif;
+  text-align : center;
+}
+h2{
+  font-size : 40px;
+  margin-left : 5px;
+}
+#quote{
+  margin : 50px;
+  margin-top : 0px;
+  margin-left : 168px;
+  text-align : center;
+  width : 500px;
+  border : groove 10px;
+  padding : 20px;
+  font-family : cursive;
+  font-style : italic ;
+  font-size : 50px;
+  color : maroon ;
+  background-color: #FBBBB9;
+  line-height : 1.3em;
+  position : fixed;
+ 
+}
+#btn{
+  font-style : bold;
+  font-size : 30px;
+  border-radius : 25px;
+  text-align : center;
+  margin : 50px;
+  margin-top : 500px;
+  background-color : #FBBBB9;
+ transition : 3 width;
+  font-family: serif;
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+   padding : 22px 10px;
+   
+}
+#btn:hover{
+  background-color : silver;
+}</style></head> 
+ <body> 
+  <h1> Random Quotes Generator</h1> 
+  <h2> Quote of the day </h2> 
+  <div id="quote"> 
+  </div> 
+  <button type="button" id="btn" alt="Generates quotes"> Quotes</button> 
+ 
+<script type="text/javascript" id="dcoder_script">const q_arr = [
+ "<q> Live as if you were to die tomorrow . Learn as if you were to live forever </q><br><b>&#8210; Mahatma Gandhi</b>" , 
+  "<q> That which does not kill us makes us stronger </q><br> <b> &#8210; Friedrich Nietzsche</b>",
+  "<q> We must not allow other people\'s limited perceptions to define us. </q><br> <b>&#8210; Virginia Satir</b>",
+  "<q> Do what you can, with what you have, where you are. </q><br><b> &#8210; Theodore Roosevelt</b>" ,
+  "<q> Be yourself everyone else is already taken. </q><br><b>&#8210; Oscar Wilde</b>",
+  "<q> This above all: to thine own self be true. </q><br><b> &#8210; William Shakespeare </b>" ,
+  "<q> If you cannot do great things, do small things in a great way. </q><br><b>&#8210; Napoleon Hill</b>",
+  "<q> If opportunity doesn\'t knock, build a door. </q><br><b> &#8210; Milton Berle </b>" ,
+  "<q> I haven\'t failed. I\'ve just found 10,000 ways that wont work. </q></br><b> &#8210; Thomas Edison </b>" ,
+  "<q> A journey of a thousand leagues begins beneath ones feet. </q></br><b> &#8210; Lao Tzu </b>." 
+  ]
+  const button = document.querySelector('#btn');
+  button.onclick = function rQuotes(){
+  let random_q = Math.floor(Math.random() * (q_arr.length));
+  
+ document.getElementById("quote").innerHTML = q_arr[random_q];
+ };</script></body></html>
